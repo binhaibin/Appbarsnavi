@@ -1,0 +1,37 @@
+﻿<Page
+    x:Class="Appbarsnavi.PHotoGallery"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Appbarsnavi"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Frame x:Name="asssss">
+    <StackPanel>
+    <StackPanel Orientation="Horizontal" Margin="0 0 0 30">
+        <CommandBar HorizontalAlignment="Left">
+            <AppBarButton Icon="Back" Click="back_bth" />
+            
+        </CommandBar>
+        <TextBlock Text="Photo Gallery" FontSize="48" FontWeight="Bold" />
+    </StackPanel>
+    <Button  Content="Get photo" Click="get_pt"  />
+    <Grid Margin="0 40 0 0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+        <Image x:Name="X_image" Grid.Column="0"/>
+        <StackPanel Orientation="Vertical" Grid.Column="1">
+            <TextBlock Text="File Name:"/>
+            <TextBlock x:Name="Name"/>
+            <TextBlock Text="File path" />
+            <TextBlock x:Name="path"/>
+            <TextBlock Text="Date createted"/>
+            <TextBlock x:Name="create"/>
+                </StackPanel>
+    </Grid>
+</StackPanel>
+    </Frame>
+</Page>
